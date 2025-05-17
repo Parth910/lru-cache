@@ -2,6 +2,10 @@
 
 A Python implementation of a Least Recently Used (LRU) Cache data structure.
 
+## Dependencies
+
+- Python 3.6 or higher
+
 ## Installation
 
 1. Clone the repository:
@@ -10,10 +14,18 @@ git clone https://github.com/Parth910/lru-cache.git
 cd lru-cache
 ```
 
-2. Install dependencies (if any):
-```bash
-pip install -r requirements.txt
-```
+2. Run the example implementation:
+   ```bash
+   python main.py
+   ```
+   This will demonstrate the LRU cache operations with the following sequence:
+   - Initialize cache with capacity 2
+   - Put key-value pairs (1,1) and (2,2)
+   - Get values for keys 1 and 2
+   - Put key-value pair (3,3), which evicts key 1
+   - Get values for keys 2 and 3
+   - Put key-value pair (4,4), which evicts key 2
+   - Get values for keys 1, 3, and 4
 
 ## Features
 
@@ -80,7 +92,7 @@ Adds or updates a key-value pair in the cache.
 To run the test suite:
 
 ```bash
-python -m unittest test_lru_cache.py
+python3 -m unittest test_lru_cache.py
 ```
 
 ## Implementation Details
